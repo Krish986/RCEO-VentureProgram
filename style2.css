@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+body {
+    background: linear-gradient(270deg, #7f96c2, #1d3264);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 13s ease infinite;
+    -moz-animation: AnimationName 13s ease infinite;
+    -o-animation: AnimationName 13s ease infinite;
+    animation: AnimationName 13s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+header {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+
+}
+
+nav {
+    height: 10vh;
+    background: white;
+}
+
+.name {
+    float: left;
+    font-family: 'Yusei Magic', sans-serif;
+	color: #516592;
+	letter-spacing: 2px;
+	margin-left: 30px;
+	font-size: 2.5rem;
+}
+
+.face { 
+    position: absolute;
+    display: inline-block;
+	font-family: 'Yusei Magic', sans-serif;
+	color: #516592;
+	letter-spacing: 3px;
+	font-size: 2.5rem;
+}
+
+.face:after  {
+	content: "(ಥ﹏ಥ)";
+
+}
+
+.face:hover:after {
+    content: "(◕‿◕✿)";
+}
+
+li {
+    list-style-type: none;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    margin-left: auto;
+}
+
+
+a {
+	color: #384c7a;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+
+}
+a:hover, a:focus, a:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+#profile-icon, #notif-icon {
+    color: #516592;
+    font-size: 1.7rem;
+}
+
+li {
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+    transition-property: transform;
+
+}
+
+li:hover, li:focus, li:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+    #profile-icon {
+        padding-right: 15px;
+    }
+
+}
+@media screen and (max-width: 900px) {
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: #516592;
+        margin: 5px;
+
+    }
+
+    nav {
+        position: relative; /* relative to the nav */
+        padding-top: 5px;
+    }
+
+    .burger {
+        position: absolute;
+        cursor: pointer;
+        right: 4%;
+        z-index: 100;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+
+    .name  {
+        font-size: 2rem;
+    }
+
+    .face  {
+        font-size: 2rem;
+    }
+
+    .sub-menu {
+        position: absolute;
+        z-index: 90;
+        background: white;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .sub-menu.open {
+        clip-path: circle(1200px at 90% -20%);
+        -webkit-clip-path: circle(1200px at 90% -20%);
+        pointer-events: all;
+    }
+
+
+    .sub-menu li {
+        opacity: 0;
+    }
+
+    .sub-menu li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .sub-menu li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .sub-menu li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .sub-menu li:nth-child(4) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .sub-menu li:nth-child(5) {
+        transition: all 0.5s ease 1s;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+
+}
+
+.first-half {
+    display: flex;
+}
+
+.welcome-box {
+    padding-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: center;
+}
+.first-half h1 {
+    color: white;
+}
+
+.first-line {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.second-line {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.second-half h3 {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.selection-container {
+    position: relative;
+    z-index: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.selection-container button {
+    color: white;
+    border: none;
+    outline: none;
+    font-family: 'Quicksand', 'sans-serif';
+    background-color: #889ac4;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 20px 50px;
+    font-size: 2.4vw;
+    -webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+
+}
+button:hover, button:focus, button:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .first-line {
+        font-size: 5.5vw;
+        letter-spacing: 5px;
+    }
+
+    .second-line {
+        font-size: 3.5vw;
+        letter-spacing: 3px;
+    }
+
+    .second-half h3 {
+        font-size: 2.5vw;
+    }
+
+}
